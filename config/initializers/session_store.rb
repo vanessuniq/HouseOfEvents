@@ -1,0 +1,1 @@
+Rails.application.config.session_store :cookie_store, key: "_house_of_events_app", domain: "eventshouse-api.herokuapp.com"
