@@ -4,8 +4,8 @@ class SessionsController < ApplicationController
     def create
         user = User.find_by(email: login_params[:email])
         if user && user.authenticate(login_params[:password])
-            #render json: user
-            respond_with User, json: user
+            session[:user_id] = user.id
+            respond_with User, json: {status: :created, logged_in: true, user: user}
         else
             #render json: {status: 401}
             respond_with status: 401
