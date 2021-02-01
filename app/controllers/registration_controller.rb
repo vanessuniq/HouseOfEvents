@@ -1,4 +1,5 @@
 class RegistrationController < ApplicationController
+    skip_before_action :require_login, only: [:create]
     #create an account/registration
     def create
         user = User.create(registration_params)

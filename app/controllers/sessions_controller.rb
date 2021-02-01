@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
-    # to check current user
-    include CurrentUserConcern
+    skip_before_action :require_login, only: [:create]
+
     # create session / login
     def create
         user = User.find_by(email: login_params[:email])
@@ -12,16 +12,11 @@ class SessionsController < ApplicationController
             render json: {errors: ['invalid email or password']}, status: 401
         end
     end
-
-    def logged_in
-        if @current_user
-            render json: {logged_in: true, user: @current_user}
-        else
-            render json: {logged_in: false}
-        end
+    def auto_login
+        
+        render json: {logged_in: true, user: current_user}
         
     end
-    
     # logout
     def destroy
         reset_session
