@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
     end
     
     def require_login
-        render json: { logged_in: session[:user_id] }, status: :unauthorized unless logged_in?
+        render json: { logged_in: false }, status: :unauthorized unless logged_in?
     end
     
     
