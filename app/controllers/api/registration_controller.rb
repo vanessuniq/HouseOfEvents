@@ -1,4 +1,4 @@
-class RegistrationController < ApplicationController
+class Api::RegistrationController < ApplicationController
     skip_before_action :require_login, only: [:create]
     #create an account/registration
     def create
