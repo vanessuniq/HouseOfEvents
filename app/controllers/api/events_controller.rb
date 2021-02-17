@@ -26,7 +26,11 @@ class Api::EventsController < ApplicationController
     end
 
     def update
-        
+        if @event && @event.update(event_params)
+            render json: { logged_in: true, event: EventSerializer.new(@event) }, status: :200
+        else
+            render json: { logged_in: true, errors: @event.errors.full_messages }
+        end
     end
     
     def destroy
