@@ -9,7 +9,11 @@ class Api::EventsController < ApplicationController
     end
 
     def show
-        
+        if @event
+            render json: {event: EventSerializer.new(@event)}, status: 200
+        else
+            render json: {errors: ["The page you are looking for does not exist"]}, status: 404
+        end
     end
 
     def create
