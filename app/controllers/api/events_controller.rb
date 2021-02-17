@@ -34,7 +34,12 @@ class Api::EventsController < ApplicationController
     end
     
     def destroy
-        
+        if @event
+            @event.destroy
+            render json: { logged_in: true, message: "Event successfully deleted" }, status: 204
+        else
+            render json: { logged_in: true, errors: ["Unable to perform your request"] }
+        end
     end
     
     private
