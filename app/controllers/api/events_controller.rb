@@ -39,7 +39,7 @@ class Api::EventsController < ApplicationController
     end
     
     def destroy
-        if @event
+        if @event && @event.user_id == current_user.id
             @event.destroy
             render json: { logged_in: true, message: "Event successfully deleted" }, status: 204
         else
