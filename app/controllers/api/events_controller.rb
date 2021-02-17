@@ -10,14 +10,19 @@ class Api::EventsController < ApplicationController
 
     def show
         if @event
-            render json: {event: EventSerializer.new(@event)}, status: 200
+            render json: { event: EventSerializer.new(@event) }, status: 200
         else
-            render json: {errors: ["The page you are looking for does not exist"]}, status: 404
+            render json: { errors: ["The page you are looking for does not exist"] }, status: 404
         end
     end
 
     def create
-        
+        event = Event.create(event_params)
+        if event.save
+            render json: { logged_in: true, event: EventSerializer.new(event) }, status: :created
+        else
+            render json: { logged_in: true, errors: event.errors.full_messages }, status: 500
+        end
     end
 
     def update
