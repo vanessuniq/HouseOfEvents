@@ -1,5 +1,6 @@
 class Api::EventsController < ApplicationController
     before_action :find_event, only: [:update, :show, :destroy]
+    skip_before_action :require_login, only: [:index, :show]
     # CRUD Actions
 
     def index
