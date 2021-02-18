@@ -5,7 +5,7 @@ class Api::RegistrationController < ApplicationController
         user = User.create(registration_params)
         if user.save
             session[:user_id] = user.id
-            render json: {logged_in: true, user: UserSerializer.new(user)}, status: :created
+            render json: {logged_in: true, user: UserSerializer.new(user)}, status: 201
         else
             render json: {errors: user.errors.full_messages}, status: 500
         end

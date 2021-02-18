@@ -20,7 +20,7 @@ class Api::EventsController < ApplicationController
     def create
         event = Event.create(event_params)
         if event.save
-            render json: { logged_in: true, event: EventSerializer.new(event) }, status: :created
+            render json: { logged_in: true, event: EventSerializer.new(event) }, status: 201
         else
             render json: { logged_in: true, errors: event.errors.full_messages }, status: 500
         end
