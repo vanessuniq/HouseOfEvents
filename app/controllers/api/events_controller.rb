@@ -29,7 +29,7 @@ class Api::EventsController < ApplicationController
     def update
         if @event && @event.user_id == current_user.id
             if @event.update(event_params)
-                render json: { logged_in: true, event: EventSerializer.new(@event) }, status: :200
+                render json: { logged_in: true, event: EventSerializer.new(@event) }, status: 200
             else
                 render json: { logged_in: true, errors: @event.errors.full_messages }
             end

@@ -6,7 +6,7 @@ class Api::SessionsController < ApplicationController
         user = User.find_by(email: login_params[:email])
         if user && user.authenticate(login_params[:password])
             session[:user_id] = user.id
-            render json: {logged_in: true, user: UserSerializer.new(user)}, status: 200
+            render json: { logged_in: true, user: UserSerializer.new(user) }, status: 200
         else
            
             render json: {errors: ['invalid email or password']}, status: 401
