@@ -1,0 +1,49 @@
+[{
+        "event_type": "Symposium",
+        "date": "2018-05-01",
+        "title": "A Social-Neuroscience Perspective on Empathy",
+        "host": "Alcmaeon of Croton",
+        "published": true,
+        "user_id": 3
+    },
+    {
+        "event_type": "Colloquium",
+        "date": "2018-04-01",
+        "title": "The Neuroscience of Restorative Justice",
+        "host": "Stephen Hawking",
+        "published": true,
+        "user_id": 2
+    },
+    {
+        "event_type": "Symposium",
+        "date": "2018-04-01",
+        "title": "Cognitive Development Theory",
+        "host": "David H. Hubel, Herbert Jasper",
+        "published": true,
+        "user_id": 1
+    },
+    {
+        "event_type": "Symposium",
+        "date": "2017-05-01",
+        "title": "The Neuroscience of Moral Decision Making in Ethics",
+        "host": "Lawrence C. Katz",
+        "published": true,
+        "user_id": 2
+    },
+    {
+        "event_type": "Symposium",
+        "date": "2017-05-01",
+        "title": "Ovariectomy Effect on Hippocampus Spatial Memory",
+        "host": "Mondino de Luzzi, Walle Nauta",
+        "published": true,
+        "user_id": 1
+    },
+    {
+        "event_type": "Colloquium",
+        "date": "2017-05-01",
+        "title": "Left Brain Vs Right Brain how does this impact learning",
+        "host": "Louis Lapicque",
+        "published": true,
+        "user_id": 4
+    }
+]
