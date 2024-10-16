@@ -837,14 +837,14 @@
     rimraf "^2.7.1"
 
 "@rails/actioncable@^6.0.0":
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-6.1.1.tgz#e980b2ea1c62cae17bcddad37deb6ba88d498b63"
-  integrity sha512-A8toxvSuzK/wX9uMwyV6T1EYzlqzIJNrO8XiNCSNsmKresdX2cbAjxFdMu9haaPJPjl3aC2FKRJeVCUWVtLPAQ==
+  version "6.1.709"
+  resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-6.1.709.tgz#4c4817a8a128f7816430074f399aad3a0d4bef01"
+  integrity sha512-SkwXts+6yBaEHwN63AYF1r7lt5bJsqBziaJhlE91y+3UjPl0T/aIssWVitbzAHF4YrLWh43jrdsLoYUpymlW7Q==
 
 "@rails/activestorage@^6.0.0":
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/@rails/activestorage/-/activestorage-6.1.1.tgz#c7e9c849ab9487c9914bd0bb447467cb4520bc56"
-  integrity sha512-eSVffvzY0MrC4bGP6RrqvlHM06HZ1kc/4XM3XkoL8pAObDANREfd9Dstm7mYpsgPLyhtJ96QxYLV27IoFiVTbQ==
+  version "6.1.709"
+  resolved "https://registry.yarnpkg.com/@rails/activestorage/-/activestorage-6.1.709.tgz#c66692f4553b3b0c935b512f3ca7d81852d90092"
+  integrity sha512-y60WjFMOyxSVKZfmETXtvt3ivPVs+meXA2O5MRypVP6zmz4YKSQnvaGAM0iPG1eOmTQ+MumWbxKo8sUGP4wMlA==
   dependencies:
     spark-md5 "^3.0.0"
 
